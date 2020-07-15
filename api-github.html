@@ -5,19 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="api-github.js"></script>
-    <title>Users - API GitHub Developer</title>
+    <link rel="stylesheet" href="api-github.css">
+    <title>API GitHub Developer</title>
 </head>
-
+<header>
+    <h1>API GitHub Developer</h1>
+    <label>Usuário: </label>
+    <input type="text" id="login">
+    <button id="login" onclick="getRepoList()">Buscar</button>
+</header>
 <body>
-    <header>
-        <label>Usuário: </label>
-        <input type="text" id="login">
-        <button onclick="getRepoList()">Buscar</button>
-    </header>
     <div id="container"></div>
-    <footer>
-        <span class="copyright">Copyright &copy; 2020, API GitHub Developer</span>
-    </footer>
 </body>
 
 </html>

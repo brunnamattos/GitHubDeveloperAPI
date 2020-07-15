@@ -30,8 +30,8 @@ const setContainer = (data) => {
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Nome do Repo</th>
-                    <th>Link do Repo</th>
+                    <th>Nome Repositório</th>
+                    <th>Link Repositório</th>
                 </tr>
             </thead>
             <tbody id="containerBody">
