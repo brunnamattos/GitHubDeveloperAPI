@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    font-family: 'Inconsolata', monospace;
+}
 
 header {
     background-color: #3c4146;
@@ -30,9 +33,36 @@ h1 {
     font-size: 50px;
 }
 
-label,#login {
+.nav {
+    justify-content: center;
+    display: flex;
+    
+}
+
+#user-input {
+    font-family: 'Inconsolata', monospace;
+    text-align: left;
     font-size: 18px;
     padding: 2px 5px;
+    height: 30px;
+    width: 20%;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#user-btn {
+    font-family: 'Inconsolata', monospace;
+    font-size: 18px;
+    padding: 2px 5px;
+    height: 30px;
+    width: 10%;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #202326;
+    color: #fff;
 }
 
 
@@ -42,6 +72,22 @@ label,#login {
     padding: 0 2%;
 }
 
+
+
+.total-repo {
+    margin-top: 2%;
+}
+
+.div-table {
+    height: 20%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: inline-flex;
+    height: 38rem;
+}
+
+
+
 th, td {
     padding: 15px;
     text-align: left;
@@ -50,10 +96,36 @@ th, td {
 
 tr:hover {
     background-color: #f5f5f5;
-    color: #303030;
     font-weight: bold;
 }
 
-img {
-    border: 2px solid #3c4146;
+a {
+    color: #303030;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.table-name {
+    border-right: 1px solid #ddd;
+}
+
+.divUserPhoto {
+    display: block;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    padding: 1%;  
+}
+  
+.divLegendPhoto {
+    display: block;
+    text-align: center;
+    padding: 5%;
+}
+
+.divUserPhoto:hover {
+    box-shadow: 0 4px 8px 0 #202326;
 }

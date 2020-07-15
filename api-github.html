@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="api-github.js"></script>
     <link rel="stylesheet" href="api-github.css">
-    <title>API GitHub Developer</title>
+    <title>GitHub Developer</title>
 </head>
 <header>
-    <h1>API GitHub Developer</h1>
-    <label>Usuário: </label>
-    <input type="text" id="login">
-    <button id="login" onclick="getRepoList()">Buscar</button>
+    <h1>GitHub Developer</h1>
+    <div class="nav">
+        <input type="text" id="user-input" placeholder="&#9998; Type user">
+        <button id="user-btn" onclick="getRepoList()">Search &#128270;</button>
+    </div>
 </header>
 <body>
-    <div id="container"></div>
+    <div id="container">Enter an user to get started! &#128678;</div>
 </body>
 
 </html>

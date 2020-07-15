@@ -16,35 +16,40 @@ const getRepoList = () => {
 const userRepoURL = (user) => `${GITHUB_API_URL}${USERS_ENDPOINT}/${user}${REPOS_ENDPOINT}`;
 
 // Login/user a partir do '<input>'
-const getLogin = () => document.querySelector("#login").value;
+const getLogin = () => document.querySelector("#user-input").value;
 
-// Criação do corpo da página; Tabela com as informações do usuário através da request
+// Criação do corpo da página; Perfil do usuário; Tabela com as informações do usuário através da request
 const setContainer = (data) => {
     const containerElement = getContainerElement();
     containerElement.innerHTML = `
-        <div>
+        <div class="divUserPhoto">
             <img src="${data[0].owner.avatar_url}">
-            <h2>${data[0].owner.login}</h2>
-            <p>id: ${data[0].owner.id}</p>   
+            <div class="divLegendPhoto">
+                <h2 class="h2-user">${data[0].owner.login}</h2>
+                <p class="id-user">#id: ${data[0].owner.id}</p>
+                <p class="total-repo">Total repositories: ${data.length} </p>
+            </div>
         </div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Nome Repositório</th>
-                    <th>Link Repositório</th>
-                </tr>
-            </thead>
-            <tbody id="containerBody">
-            </tbody>
-        </table>`
+        <div class="div-table">
+            <table class="table-striped">
+                <thead>
+                    <tr>
+                        <th>Repository Name</th>
+                        <th>Repository Link</th>
+                    </tr>
+                </thead>
+                <tbody id="containerBody">
+                </tbody>
+            </table>
+        </div>`
     const containerBody = document.querySelector("#containerBody");
     
     let tableRows = ""
     data.forEach(e => {
         tableRows += `
         <tr>
-            <td>${e.name}</td>
-            <td>${e.url}</td>
+            <td class="table-name">${e.name}</td>
+            <td class="table-url"><a href="${e.html_url}">${e.html_url}</a></td>
         </tr>
     `
   });
